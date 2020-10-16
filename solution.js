@@ -15,7 +15,9 @@
 
 
 function orderByDomain(addresses) {
-
+    for (const address of addresses) {
+        console.log(address);
+    }
 }
 
 orderByDomain(["http://www.google.en/?x=jsdfkj",
