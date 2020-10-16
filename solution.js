@@ -12,3 +12,23 @@
 // order inside their group, so both "c.com","b.com","a.com" 
 // and "a.com","c.com","b.com" are correct, till they are stand 
 // before *.org)
+
+
+function orderByDomain(addresses) {
+
+}
+
+orderByDomain(["http://www.google.en/?x=jsdfkj",
+"http://www.google.de/?x=jsdfkj",
+"http://www.google.com/?x=jsdfkj",
+"http://www.google.org/?x=jsdfkj",
+"http://www.google.gov/?x=jsdfkj",]);
+
+
+// expected = [
+//     "http://www.google.com/?x=jsdfkj",
+//     "http://www.google.gov/?x=jsdfkj",
+//     "http://www.google.org/?x=jsdfkj",
+//     "http://www.google.de/?x=jsdfkj",
+//     "http://www.google.en/?x=jsdfkj",
+// ]
