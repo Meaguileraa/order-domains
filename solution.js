@@ -16,7 +16,8 @@
 
 function orderByDomain(addresses) {
     for (const address of addresses) {
-        console.log(address);
+        let domain = address.slice(18, 19);
+        console.log(domain);
     }
 }
 
