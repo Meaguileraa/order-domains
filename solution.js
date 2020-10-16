@@ -15,10 +15,23 @@
 
 
 function orderByDomain(addresses) {
+    const d = [];
+    const other = [];
     for (const address of addresses) {
-        let domain = address.slice(18, 19);
-        console.log(domain);
+
+        let domain = address.slice(18, 21);
+
+        if (domain === 'com' || domain === 'org' || domain === 'gov') {
+            d.push(address);
+            d.sort();
+        } else {
+            other.push(address);
+            other.sort();
+        }
     }
+    const final = d.concat(other); 
+    console.log(final);
+    // return final;
 }
 
 orderByDomain(["http://www.google.en/?x=jsdfkj",
